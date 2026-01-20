@@ -19,6 +19,7 @@ jobs:
 
       - name: Instalar dependências
         run: pip install notebook nbconvert
+             pip install numpy pillow matplotlib opencv-python
 
       - name: Executar notebook
         run: jupyter nbconvert --to notebook --execute ML2_Cacau.ipynb
