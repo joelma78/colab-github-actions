@@ -1,0 +1,13 @@
+numpy
+pandas
+Pillow
+matplotlib
+opencv-python
+scikit-learn
+seaborn
+tqdm
+tensorflow
+joblib
+gdown
+notebook
+nbconvert
