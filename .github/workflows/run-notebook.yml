@@ -18,7 +18,13 @@ jobs:
           python-version: "3.10"
 
       - name: Instalar dependências
-        run: pip install notebook nbconvert numpy pillow matplotlib opencv-python
+        run: pip install -r requirements.txt
+
+      - name: Descompactar imagens
+        run: |
+             pip install gdown
+             gdown --id 1N4hax6GZIM0aITx4jkH11wUVLIif71tq -O dataset.zip
+             unzip dataset.zip -d data/
 
       - name: Executar notebook
         run: jupyter nbconvert --to notebook --execute ML2_Cacau.ipynb
